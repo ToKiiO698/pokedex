@@ -1,0 +1,20 @@
+.img_ctr {
+  height: 50%;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.bck-clr {
+  background-color: #00c3ff;
+}
+
+.poke-font {
+  font-family: "Pokemon Solid", sans-serif;
+}
+
+.bck-img {
+  background-image: url("../img/pokeback.jpg");
+  background-size: 135%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
