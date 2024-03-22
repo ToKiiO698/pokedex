@@ -17,23 +17,29 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="bck-clr bck-img">
+  <body class="bck-img">
     <div class="container">
       <div class="row">
         <h1 class="text-center poke-font">Bienvenue sur le super</h1>
         <h2 class="text-center"><img src="img/logo_poke.png" /></h2>
-        <h3 class="text-center">
-          <input id="rech" /><button id="button">Rechercher</button>
-        </h3>
-
-        <div class="card" style="width: 18rem; display: none">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title" id="pokename">Card title</h5>
-            <p class="card-text" id="description">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
+        <h1 class="text-center poke-font">Rechercher votre pokemon !</h1>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <input id="rech" class="bck-clr" />
+          <button id="button" class="btn-info btn">Rechercher</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="card" id="card" style="width: 20rem; display: none">
+            <img id="img" class="card-img-top" alt="..." />
+            <div class="card-body bck-clr">
+              <h5 class="card-title text-center poke-font" id="name"></h5>
+              <p class="card-text text-center poke-font" id="type"></p>
+              <p class="card-text text-center poke-font" id="height"></p>
+              <p class="card-text text-center poke-font" id="weight"></p>
+            </div>
           </div>
         </div>
       </div>
