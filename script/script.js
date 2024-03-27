@@ -21,7 +21,9 @@ button.addEventListener("click", () => {
       .then((data) => {
         console.log(data);
         const name = data.name;
-        const img = data.sprites.front_default;
+        const img =
+          data.sprites.versions["generation-v"]["black-white"].animated
+            .front_default;
         const type = data.types[0].type.name;
         const weight = data.weight;
         const height = data.height;
