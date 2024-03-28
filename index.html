@@ -17,30 +17,39 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="bck-img">
+  <body class="clr">
     <div class="container">
-      <div class="row">
+      <div class="row espace">
         <h1 class="text-center poke-font">Bienvenue sur le super</h1>
         <h2 class="text-center"><img src="img/logo_poke.png" /></h2>
         <h1 class="text-center poke-font">Rechercher votre pokemon !</h1>
         <div class="col-md-4"></div>
-        <div class="col-md-4">
-          <input id="rech" class="bck-clr" />
-          <button id="button" class="btn-info btn">Rechercher</button>
+      </div>
+      <div class="row espace">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 ">
+          <input id="rech" class="transparant" />
+          <button id="button" class="btn">Rechercher</button>
         </div>
       </div>
-      <div class="row">
+      <div class="row espace">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-          <div class="card" id="card" style="width: 20rem; display: none">
-            <img id="img" class="card-img-top" alt="..." />
-            <div class="card-body bck-clr">
-              <h5 class="card-title text-center poke-font" id="name"></h5>
-              <p class="card-text text-center poke-font" id="type"></p>
-              <p class="card-text text-center poke-font" id="height"></p>
-              <p class="card-text text-center poke-font" id="weight"></p>
-            </div>
-          </div>
+          <div class="container border" id="card" style="display: none">
+            <div class="wrapper">
+              <div class="banner-image"><p class="text-center"> <img id="img" class="img_size" alt="..." /></p></div>
+              <h1 class="text-center" id="name"></h1>
+              <h2 class="text-center">features</h2>
+              <p class="p" id="type"></p>
+              <p class="p" id="height"></p>
+              <p class="p" id="weight"></p>
+              <h2 class="text-center">abilities</h2>
+              <p class="p" id="abilities"></p>
+              <p class="p" id="moves"></p>
+              <p class="p" id="stats"></p>
+             </div>
+               </div>
+           </div>
         </div>
       </div>
     </div>

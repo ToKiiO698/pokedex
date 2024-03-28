@@ -23,10 +23,17 @@ button.addEventListener("click", () => {
         const name = data.name;
         const img =
           data.sprites.versions["generation-v"]["black-white"].animated
-            .front_default;
+            .front_shiny;
         const type = data.types[0].type.name;
         const weight = data.weight;
         const height = data.height;
+        const stats = data.stats;
+        const abilities = data.abilities;
+        const abilitiesTab = [];
+        abilities.forEach((ability) => {
+          abilitiesTab.push(ability.ability.name);
+        });
+        console.log(abilitiesTab);
         const moves = data.moves;
         const movesTab = [];
         moves.forEach((move) => {
@@ -35,9 +42,25 @@ button.addEventListener("click", () => {
         console.log(movesTab);
         document.getElementById("name").innerHTML = name;
         document.getElementById("img").src = img;
-        document.getElementById("type").innerHTML = type;
-        document.getElementById("weight").innerHTML = weight;
-        document.getElementById("height").innerHTML = height;
+        document.getElementById("type").innerHTML += `<li>Type : ${type}</li>`;
+        document.getElementById(
+          "weight"
+        ).innerHTML += `<li>Weight : ${weight}</li>`;
+        document.getElementById(
+          "height"
+        ).innerHTML += `<li>Height : ${height}</li>`;
+        document.getElementById("stats").innerHTML = "";
+        stats.forEach((stat) => {
+          document.getElementById(
+            "stats"
+          ).innerHTML += `<li>${stat.stat.name} : ${stat.base_stat}</li>`;
+        });
+        document.getElementById("abilities").innerHTML = "";
+        abilitiesTab.forEach((ability) => {
+          document.getElementById(
+            "abilities"
+          ).innerHTML += `<li>${ability}</li>`;
+        });
         card.style.display = "block";
       })
       .catch((error) => {
